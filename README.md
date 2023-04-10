@@ -92,18 +92,34 @@ php artisan serve
 
 <p>O sistema de login permite que os usuários se autentiquem usando um endereço de e-mail e senha. Ao enviar o formulário de login, o sistema verifica as credenciais do usuário e redireciona para a página inicial se a autenticação for bem sucedida. Se a autenticação falhar, uma mensagem de erro é exibida para o usuário.</p>
 
+#
 ### Validação de Força de Senha
 <p>A função de validação de força de senha verifica se uma senha é fraca, média ou forte. Uma senha forte deve ter pelo menos 8 caracteres, incluindo letras maiúsculas e minúsculas, números e caracteres especiais. Para verificar a força de uma senha, acesse a página de cadastro e digite uma senha no campo de senha. Uma mensagem será exibida indicando se a senha é fraca, média ou forte.</p>
 
+#
+### Criando um usuário administrador
+<p>Ao instalar o projeto, você pode querer criar um usuário administrador para ter acesso a todas as funcionalidades do sistema. Para fazer isso, você pode seguir os seguintes passos:</p>
+
+Execute o comando php artisan db:seed --class=UsersSeeder para criar um usuário administrador com nome "Admin", email "admin@example.com" e senha "@Generic123". O usuário criado terá permissão de administrador e pode acessar todas as funcionalidades do sistema.
+
+Para criar um usuário administrador com informações diferentes, você pode editar o arquivo database/seeds/UsersSeeder.php e modificar o código para criar um usuário com as informações desejadas. Lembre-se de executar o comando php artisan db:seed novamente para atualizar os dados do banco de dados.
+
+<strong>Observação: É altamente recomendável que você altere a senha padrão do usuário administrador assim que fizer o primeiro login no sistema.<strong>
+
+Com esses passos, você poderá criar um usuário administrador e personalizar as informações de acordo com suas necessidades.
+
+#
 ### Registro de Usuários em Massa
 
 <p>A função de registro de usuários em massa permite que os usuários sejam registrados no sistema a partir de uma planilha que contenha as informações de login, senha e e-mail. Para importar os usuários, acesse a página de registro em massa (http://127.0.0.1:8000/admin/upload-spreadsheet) e selecione o arquivo CSV ou XSLX contendo as informações dos usuários. Certifique-se de que o arquivo contém as colunas corretas.
 </p>
 <p>* Apenas usuários com is_admin == 1 poderão acessar a parte administrativa</p>
 
+#
 ### Consumo de API Pokemon
 <p>A função de consumo de API Pokemon permite que os usuários visualizem informações sobre pokemons. Para acessar essa funcionalidade, acesse a página de consulta de pokemons (http://127.0.0.1:8000/pokemons). A página exibirá uma lista com os gif, nome, location_area_encounter e base_experience</p>
 
+#
 ### Exportando dados da API
 <p>Para exportar os dados apresentados na parte 4 em formato de planilha (CSV ou XLSX), basta clicar no botão "Exportar para CSV" ou "Exportar para XLSX" que está localizado na mesma página onde os dados foram apresentados.</p>
 
@@ -111,6 +127,7 @@ php artisan serve
 Ao clicar em um dos botões, o sistema irá gerar um arquivo de planilha com os dados apresentados. O arquivo pode ser baixado e salvo em seu computador para posterior análise.
 </p>
 
+#
 ### Multi-linguagem
 <p>O sistema possui suporte a múltiplos idiomas, permitindo que o usuário possa selecionar o idioma preferido durante o uso da aplicação.
 
