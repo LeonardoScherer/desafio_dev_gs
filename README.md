@@ -72,6 +72,13 @@ MAIL_ENCRYPTION=tls
 php artisan migrate
 ```
 
+<li>Instale as dependencias NPM:</li>
+
+```bash
+npm install
+npm run build
+```
+
 <li>Inicie o servidor web:</li>
 
 ```bash
