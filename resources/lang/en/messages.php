@@ -16,6 +16,5 @@ return [
     "You don't have permission to access" => "You don't have permission to access",
     "spreadsheet_specifications" => "The spreadsheet does not meet the specifications. Required columns are: email, password, login.",
     'Registered users' => 'Registered users',
-    'Existing users (not updated)' => 'Existing users (not updated)'
-
+    'Existing users (not updated)' => 'Existing users (not updated)',
 ];

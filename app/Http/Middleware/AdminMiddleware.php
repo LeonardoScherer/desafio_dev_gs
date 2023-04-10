@@ -19,6 +19,6 @@ class AdminMiddleware
         if (auth()->check() && auth()->user()->is_admin) {
             return $next($request);
         }
-        abort(403, "You don't have permission to access");
+        abort(403, trans("messages.You don't have permission to access"));
     }
 }
