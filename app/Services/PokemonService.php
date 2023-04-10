@@ -27,7 +27,7 @@ class PokemonService
             $location_area_name = $this->getLocationAreaEncounters($specific_pokemon['location_area_encounters']);
 
             $array_pokemon = [
-                'name' => $pokemon['name'],
+                'name' => ucfirst($pokemon['name']),
                 'location_area_encounters' => $location_area_name,
                 'base_experience' => $specific_pokemon['base_experience'],
                 'pokemon_gif' => $specific_pokemon['pokemon_gif'],
