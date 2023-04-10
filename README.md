@@ -57,13 +57,13 @@ DB_PASSWORD=senha_do_usuario_do_banco_de_dados
 
 ```env 
 MAIL_MAILER=smtp
-MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_HOST=host
 MAIL_PORT=2525
 MAIL_USERNAME=seu_usuario
 MAIL_PASSWORD=sua_senha
 MAIL_ENCRYPTION=tls
 ``` 
-<p>Substitua seu_usuario e sua_senha pelas suas informações de acesso ao servidor de e-mail.</p>
+<p>Substitua host, port, seu_usuario e sua_senha pelas suas informações de acesso ao servidor de e-mail.</p>
 </ul>
 
 <li>Execute as migrações do banco de dados:</li>
