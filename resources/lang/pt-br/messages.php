@@ -17,6 +17,9 @@ return [
     'spreadsheet_specifications' => 'Planilha não atende as especificações. Colunas necessárias: email, password, login',
     'Registered users' => 'Usuários cadastrados',
     'Existing users (not updated)' => 'Usuários ja existentes (não foram atualizado)',
-
-
+    "Attention: The spreadsheet should contain the columns: 'Login', 'Email', 'Password'" => "Atenção: A planilha deve conter as colunas: 'Login', 'Email', 'Password'",
+    'Insert a spreadsheet (XLSX or CSV) to register users in bulk' => 'Envie uma planilha (XLSX ou CSV) para registrar em usuários em massa',
+    'Register users' => 'Cadastrar Usuários',
+    'Upload file' => 'Enviar arquivo',
+    'Bulk User Registration' => 'Cadastro de usuários em massa',
 ];

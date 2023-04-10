@@ -17,4 +17,9 @@ return [
     "spreadsheet_specifications" => "The spreadsheet does not meet the specifications. Required columns are: email, password, login.",
     'Registered users' => 'Registered users',
     'Existing users (not updated)' => 'Existing users (not updated)',
+    "Attention: The spreadsheet should contain the columns: 'Login', 'Email', 'Password'" => "Attention: The spreadsheet should contain the columns: 'Login', 'Email', 'Password'",
+    'Insert a spreadsheet (XLSX or CSV) to register users in bulk' => 'Insert a spreadsheet (XLSX or CSV) to register users in bulk',
+    'Register users' => 'Register users',
+    'Upload file' => 'Upload file',
+    'Bulk User Registration' => 'Bulk User Registration',
 ];
