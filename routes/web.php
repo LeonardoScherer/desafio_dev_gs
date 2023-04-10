@@ -42,6 +42,7 @@ Route::middleware([
 ])->prefix('admin')->group(function () {
     Route::get('/upload-spreadsheet', [AdminController::class, 'showSpreadsheetUploadToRegisterUsers'])->name('show.register-users');
     Route::post('/upload-spreadsheet', [AdminController::class, 'storeSpreadsheetUploadToRegisterUsers'])->name('store.spreadsheet-users');
+    Route::get('/download-template-spreadsheet', [AdminController::class, 'downloadTemplateSpreadsheet'])->name('download.template-spreadsheet');
 });
 
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreUserRegistrationSpreadsheet;
+use App\Services\SpreadsheetService;
 use App\Services\UserService;
 
 
@@ -27,5 +28,16 @@ class AdminController extends Controller
         }
 
         return view('admin\show-spreadsheet-upload', compact('message', 'message_error'));
+    }
+
+    public function downloadTemplateSpreadsheet()
+    {
+        $columns = [
+            'login',
+            'email',
+            'password'
+        ];
+
+        (new SpreadsheetService())->generateSpreadsheet($columns, 'template_spreadsheet');
     }
 }

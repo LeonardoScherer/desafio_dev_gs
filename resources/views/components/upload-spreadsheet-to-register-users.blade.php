@@ -26,6 +26,7 @@
 
             <div
                 class="flex items-center justify-end px-4 py-3 bg-gray-50 dark:bg-gray-800 text-right sm:px-6 shadow sm:rounded-bl-md sm:rounded-br-md">
+                <span class="underline grid justify-end"><a href="{{ route('download.template-spreadsheet') }}" class="dark:text-gray-200">{{ __('messages.Download Template Spreadsheet') }}</a></span>
                 <x-button class="ml-3">
                     {{ __('messages.Register users') }}
                 </x-button>
