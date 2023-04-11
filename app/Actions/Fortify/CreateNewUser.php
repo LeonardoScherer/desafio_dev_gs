@@ -21,13 +21,10 @@ class CreateNewUser implements CreatesNewUsers
      */
     public function create(array $input, string $is_bulk = null): User
     {
-        // Require at least 8 characters...
-        $passwordRules = (new Password)->length(8)->requireUppercase()->requireNumeric()->requireSpecialCharacter();
-
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => $passwordRules,
+            'password' => $this->passwordRules(),
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
         ])->validate();
 
